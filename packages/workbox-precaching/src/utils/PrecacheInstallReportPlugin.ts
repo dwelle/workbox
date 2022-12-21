@@ -20,7 +20,7 @@ class PrecacheInstallReportPlugin implements WorkboxPlugin {
   updatedURLs: string[] = [];
   notUpdatedURLs: string[] = [];
 
-  handlerWillStart: WorkboxPlugin['handlerWillStart'] = async ({
+  handlerWillStart?: WorkboxPlugin['handlerWillStart'] = async ({
     request,
     state,
   }: WorkboxPluginCallbackParam['handlerWillStart']) => {
@@ -30,7 +30,7 @@ class PrecacheInstallReportPlugin implements WorkboxPlugin {
     }
   };
 
-  cachedResponseWillBeUsed: WorkboxPlugin['cachedResponseWillBeUsed'] = async ({
+  cachedResponseWillBeUsed?: WorkboxPlugin['cachedResponseWillBeUsed'] = async ({
     event,
     state,
     cachedResponse,

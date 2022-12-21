@@ -35,7 +35,7 @@ class BackgroundSyncPlugin implements WorkboxPlugin {
    * @param {Request} options.request
    * @private
    */
-  fetchDidFail: WorkboxPlugin['fetchDidFail'] = async ({request}) => {
+  fetchDidFail?: WorkboxPlugin['fetchDidFail'] = async ({request}) => {
     await this._queue.pushRequest({request});
   };
 }

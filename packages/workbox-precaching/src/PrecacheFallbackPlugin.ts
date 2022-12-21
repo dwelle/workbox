@@ -58,7 +58,7 @@ class PrecacheFallbackPlugin implements WorkboxPlugin {
    *
    * @private
    */
-  handlerDidError: WorkboxPlugin['handlerDidError'] = () =>
+  handlerDidError?: WorkboxPlugin['handlerDidError'] = () =>
     this._precacheController.matchPrecache(this._fallbackURL);
 }
 

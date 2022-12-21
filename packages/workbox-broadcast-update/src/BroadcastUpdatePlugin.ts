@@ -55,7 +55,7 @@ class BroadcastUpdatePlugin implements WorkboxPlugin {
    * @param {Request} options.request The request that triggered the update.
    * @param {Request} options.event The event that triggered the update.
    */
-  cacheDidUpdate: WorkboxPlugin['cacheDidUpdate'] = async (options) => {
+  cacheDidUpdate?: WorkboxPlugin['cacheDidUpdate'] = async (options) => {
     dontWaitFor(this._broadcastUpdate.notifyIfUpdated(options));
   };
 }

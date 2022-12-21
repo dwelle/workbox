@@ -47,7 +47,7 @@ class CacheableResponsePlugin implements WorkboxPlugin {
    * @return {Response|null}
    * @private
    */
-  cacheWillUpdate: WorkboxPlugin['cacheWillUpdate'] = async ({response}) => {
+  cacheWillUpdate?: WorkboxPlugin['cacheWillUpdate'] = async ({response}) => {
     if (this._cacheableResponse.isResponseCacheable(response)) {
       return response;
     }

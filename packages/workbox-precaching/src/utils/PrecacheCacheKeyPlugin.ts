@@ -25,7 +25,7 @@ class PrecacheCacheKeyPlugin implements WorkboxPlugin {
     this._precacheController = precacheController;
   }
 
-  cacheKeyWillBeUsed: WorkboxPlugin['cacheKeyWillBeUsed'] = async ({
+  cacheKeyWillBeUsed?: WorkboxPlugin['cacheKeyWillBeUsed'] = async ({
     request,
     params,
   }: WorkboxPluginCallbackParam['cacheKeyWillBeUsed']) => {

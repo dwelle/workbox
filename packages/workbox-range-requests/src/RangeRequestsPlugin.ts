@@ -31,7 +31,7 @@ class RangeRequestsPlugin implements WorkboxPlugin {
    *
    * @private
    */
-  cachedResponseWillBeUsed: WorkboxPlugin['cachedResponseWillBeUsed'] = async ({
+  cachedResponseWillBeUsed?: WorkboxPlugin['cachedResponseWillBeUsed'] = async ({
     request,
     cachedResponse,
   }) => {
